@@ -49,18 +49,18 @@ public class Demo {
         // fantasyBox.addItem(book1); compilation error when trying to add Book, not Fantasy
         System.out.println(fantasyBox.getItems());
 
-        FoodShelf<Box<Food>> foodShelf = new FoodShelf<>();
+        Shelf<Box<Food>> foodShelf = new Shelf<>();
         foodShelf.addBox(foodBox);
         //foodShelf.addBox(bookBox); //compilation error when adding other boxes then those with food
-        ToysShelf<Box<Toy>> toyShelf = new ToysShelf<>();
+        Shelf<Box<Toy>> toyShelf = new Shelf<>();
         toyShelf.addBox(toyBox);
 
-        BookShelf<Box<Book>> bookShelf = new BookShelf<>();
+        Shelf<Box<Book>> bookShelf = new Shelf<>();
         bookShelf.addBox(fantasyBox);
         bookShelf.addBox(bookBox);
         //bookShelf.addBox(toyBox); // obviously error
 
-        UniversalShelf<Box<?>> universalShelf = new UniversalShelf<>();
+        Shelf<Box<?>> universalShelf = new Shelf<>();
         universalShelf.addBox(bookBox);
         universalShelf.addBox(fantasyBox);
         universalShelf.addBox(toyBox);
