@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shelf <T extends Box<?>>{
+public class Shelf <T extends Box<? extends Item>>{
     List<T> collection = new ArrayList<>();
 
     public void addBox (T item)

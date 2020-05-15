@@ -60,11 +60,12 @@ public class Demo {
         bookShelf.addBox(bookBox);
         //bookShelf.addBox(toyBox); // obviously error
 
-        Shelf<Box<?>> universalShelf = new Shelf<>();
+        Shelf<Box<? extends Item>> universalShelf = new Shelf<>();
         universalShelf.addBox(bookBox);
         universalShelf.addBox(fantasyBox);
         universalShelf.addBox(toyBox);
         universalShelf.addBox(foodBox);
+        //universalShelf.addBox(intBox); error
 
 
     }
